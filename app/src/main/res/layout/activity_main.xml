@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.example.luke_detection.http.views.Header
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:header_title="@string/app_name"
+        app:header_is_left_iv_visiable="false">
+    </com.example.luke_detection.http.views.Header>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.sakuramomoko.searchinganimview.SearchingAnimView
+        android:layout_width="306dp"
+        android:layout_height="306dp"
+        app:search_color="#ff9e21"
+        android:id="@+id/searching_anim_view"/>
+</LinearLayout>
