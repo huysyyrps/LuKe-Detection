@@ -20,6 +20,8 @@ import com.sakuramomoko.searchinganimview.SearchingAnimView;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.http.HEAD;
+
 public class MainActivity extends AppCompatActivity {
     private IntentFilter intentFilter;
     private BroadcastReceiver mReceiver;
@@ -112,5 +114,6 @@ public class MainActivity extends AppCompatActivity {
             finish();
             System.exit(0);
         }
+        Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
     }
 }
